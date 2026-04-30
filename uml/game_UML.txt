@@ -1,0 +1,8 @@
+@startuml
+class Game {
+    display_logo()
+    display_menu()
+    play_game()
+        __init__()
+}
+@enduml

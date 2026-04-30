@@ -1,0 +1,7 @@
+@startuml
+class Player {
+    input_pilihan()
+        pilihan
+    __init__()
+}
+@enduml

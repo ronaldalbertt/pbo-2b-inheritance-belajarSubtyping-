@@ -1,0 +1,6 @@
+@startuml
+class Pilihan {
+    get_computer_choice()
+        __init__()
+}
+@enduml

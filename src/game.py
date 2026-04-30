@@ -1,5 +1,6 @@
-from pilihan import Pilihan
-from juri import Juri
+from src.helper.juri import Juri
+from src.model.npc import Npc
+from src.model.player import Player
 
 class Game:
 
@@ -24,24 +25,22 @@ class Game:
         self.display_menu()
         
         while True:
-            player = input("Pilihan kamu: ").lower()
+            
+            player = Player()
+            player.input_pilihan()
 
-            if player == "exit":
+            if player.pilihan == "exit":
                 print("Terima kasih sudah bermain!")
                 break
 
-            if player not in ["batu", "gunting", "kertas"]:
+            if player.pilihan not in ["batu", "gunting", "kertas"]:
                 print("Input tidak valid, coba lagi.\n")
                 continue
 
-            obj_pilihan = Pilihan()
-            computer = obj_pilihan.get_computer_choice()
-            print(f"Komputer memilih: {computer}")
+            computer = Npc()
+            computer.pilih_acak()
+            print(f"Komputer memilih: {computer.pilihan}")
 
             obj_juri = Juri()
             obj_juri.determine_winner(player, computer)
 
-
-if __name__ == "__main__":
-    game = Game()   # membuat object game
-    game.play_game()

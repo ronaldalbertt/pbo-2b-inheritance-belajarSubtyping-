@@ -1,0 +1,7 @@
+@startuml
+class Npc {
+    pilih_acak()
+        pilihan
+    __init__()
+}
+@enduml
