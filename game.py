@@ -2,12 +2,27 @@ from pilihan import Pilihan
 from juri import Juri
 
 class Game:
-    
-    def play_game(self):
-        print("=== Game Batu Gunting Kertas ===")
-        print("Ketik: batu / gunting / kertas")
-        print("Ketik 'exit' untuk keluar\n")
 
+    def display_logo(self):
+        print(" █████╗ ███████╗███████╗ █████╗ ███╗   ██╗")
+        print("██╔══██╗██╔════╝██╔════╝██╔══██╗████╗  ██║")
+        print("███████║█████╗  █████╗  ███████║██╔██╗ ██║")
+        print("██╔══██║██╔══╝  ██╔══╝  ██╔══██║██║╚██╗██║")
+        print("██║  ██║██║     ██║     ██║  ██║██║ ╚████║")
+        print("╚═╝  ╚═╝╚═╝     ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═══╝")
+    
+    def display_menu(self):
+        print("=== Game Batu Gunting Kertas ===")
+        print("Silahkan ketik,")
+        print("batu, gunting, kertas : untuk bermain")
+        print("help : untuk cara bermain")
+        print("exit : untuk keluar\n")
+
+    def play_game(self):
+
+        self.display_logo()
+        self.display_menu()
+        
         while True:
             player = input("Pilihan kamu: ").lower()
 
